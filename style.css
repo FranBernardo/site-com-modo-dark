@@ -1,0 +1,288 @@
+  *{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color-text:#000;
+    --background-color:#fff;
+    --background-color2:#f2f2f2;
+    --imag-foto:250px;
+    --video:500px
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+main{
+    background: var(--background-color);
+    color: var(--color-text);
+    width: 100%;
+    position: absolute;
+    transition: .5s ease-in-out background, .5s ease-in-out color;
+}
+
+/* edição do modo dark */
+
+#checdark:checked + main{
+    --color-text:#fff;
+    --background-color:#000;
+    --background-color2:rgb(65, 53, 53);
+
+    background: var(--background-color);
+  color: var(--color-text);
+  transition: .5s ease-in-out background, .5s ease-in-out color;
+}
+#checdark{
+    display: none;
+}
+
+.darkmodel{
+    cursor: pointer;
+}
+
+#checdark:checked + main .darkmodel::after{
+    content: 'on';
+}
+
+.darkmodel::after{
+    content: 'off';
+}
+
+/* parte superior */
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+header img{
+    width: 100px;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+nav li{
+    margin-left: 40px;
+    list-style: none;
+    margin-right: 40px;
+    margin-top: 50px;
+}
+nav a{
+    text-decoration: none;
+    color: var(--color-text);
+}
+nav a:hover{
+    color: darkmagenta;
+    box-shadow: 5px 10px 20px black;
+}
+/* edição da primeira seçao */
+
+#inicio{
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+    height: 40vh;
+    margin-top: 90px;
+}
+
+#inicio p{
+    margin-left: -860px;
+}
+
+#inicio h1{
+    font-size: 60px;
+}
+#inicio h2{
+    margin-left: -309px;
+}
+
+#inicio h3{
+    margin-left: -580px;
+}
+.desco{
+    color: darkmagenta;
+}
+/* edição do sobre */
+
+#sobre {
+    text-align: center;
+    display: flex;
+    margin-left: 10%;
+    margin-top:70px;
+
+}
+#sobre p{
+    text-align: center;
+    width: 700px;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+
+#sobre img{
+    width: 200px;
+    margin-left: 150px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+/* edição da 2 seçao */
+
+#serviços{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 80vh;
+    padding: 50px;
+}
+
+#serviços div{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 40px;
+    background: var(--background-color2) ;
+}
+
+/* edição da 3º seçao */
+
+#contato form{
+    text-align: center;
+    display: grid;
+}
+.nomeil input{
+    width: 50%;
+    height: 40px;
+    margin: 8px;
+    border-radius: 5px;
+}
+textarea{
+    width: 60%;
+    margin-left: 250px;
+}
+.botao input{
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+    background: darkmagenta;
+    border: o;
+    border-radius: 5px;
+    float: right;
+    
+}
+
+
+.botao input:hover{
+    background: blueviolet;
+    box-shadow: 5px 10px 20px black;
+}  
+
+/* edição do da tabela*/
+
+#conhecimentos{
+    height: 80vh;
+    padding: 50px;
+    margin-left: 20%;
+}
+
+table caption{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 2em;
+}
+
+table th,td{
+    border: 3px solid black;
+    padding: 20px;
+    background-color: rgb(186, 142, 228);
+    height: 40px;
+    width: 50%;
+}
+
+/* edição sobre oq mais gosto de fazer*/
+
+#quem-sou{
+    padding: 20px;
+}
+section#quem-sou h2{
+    text-align: center;
+    margin-bottom: 50px;
+}
+section.gosto ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+section.gosto figure{
+    border:8px outset rgb(186, 142, 228);
+    padding: 20px;
+
+}
+section.gosto img{
+    width: var(--imag-foto);
+}
+/* criar projetos*/
+
+section#projetos{
+    padding: 20px;
+}
+section#projetos h2{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+section.proje ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    line-height: 3em;
+}
+section.proje li{
+    border: 5px dotted darkmagenta;
+    display: grid;
+    margin: 20px 20px 20px 30px;
+    padding: 10px;
+}
+section.proje a{
+    text-decoration: none;
+    color:var(--color-text) ;
+    width: 80px;
+    line-height: 2em;
+}
+section.proje a:hover{
+    border: 3px solid darkorchid;
+    border-radius: 5px;
+    background-color: darkorchid;
+}
+
+section.proje video, img{
+    width: var(--video);
+}
+
+/* edição footer */
+footer{
+    text-align: center;
+    
+    margin-top: 90px;
+    margin-bottom: 0;
+} 
+
+footer ul{
+     display: flex;
+     justify-content: space-around;
+     list-style: none;
+     font-size: 50px;
+     margin-bottom: 30px;
+} 
+
+ footer a{
+     text-decoration: none;
+     color: darkmagenta;
+     box-shadow: 5px 10px 20px black;
+ 
+     
+ }
+
